@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ATIAT Operations Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+<header class="site-header"><div class="container nav"><div class="brand"><span class="brand-mark">A</span><span>ATIAT</span></div><a href="index.html" class="nav-link">Customer Portal</a></div></header>
+<main class="section"><div class="container">
+<div id="loginCard" class="login-card"><p class="eyebrow">OPERATIONS</p><h1>Staff Dashboard</h1><p>Enter the administrator key to view vehicle-hire requests.</p><input id="adminKey" type="password" placeholder="Admin key"><button id="loginBtn" class="button">Open Dashboard</button><p id="loginError" class="error-text"></p></div>
+<div id="dashboard" class="hidden">
+<div class="section-heading"><p class="eyebrow">ATIAT VEHICLE HIRE</p><h1>Operations Dashboard</h1><p>Monitor incoming requests, service status and fleet availability.</p></div>
+<div class="stats-grid" id="stats"></div>
+<div class="dashboard-grid">
+<section class="panel"><div class="panel-head"><h2>Vehicle Requests</h2><button class="small-button" id="refreshBtn">Refresh</button></div><div class="table-wrap"><table><thead><tr><th>Reference</th><th>Customer</th><th>Trip</th><th>Date</th><th>Vehicle</th><th>Status</th></tr></thead><tbody id="requestsBody"></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>Fleet Status</h2></div><div id="vehicles" class="vehicle-list"></div></section>
+</div>
+</div>
+</div></main>
+<script src="config.js"></script><script src="dashboard.js"></script>
+</body></html>

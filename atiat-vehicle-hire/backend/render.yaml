@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: atiat-vehicle-hire-api
+    env: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: AdminKey
+        sync: false
+      - key: FrontendUrl
+        sync: false

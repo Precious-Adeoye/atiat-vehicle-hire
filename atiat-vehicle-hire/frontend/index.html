@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATIAT Vehicle Hire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <div class="brand"><span class="brand-mark">A</span><span>ATIAT</span></div>
+    <a href="#request" class="nav-link">Request a Vehicle</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">ATIAT VEHICLE HIRE</p>
+      <h1>Move with confidence.</h1>
+      <p class="hero-copy">Submit your vehicle-hire request online and let our team review the details, confirm availability and get back to you.</p>
+      <a class="button" href="#request">Start a Request</a>
+    </div>
+    <div class="hero-card">
+      <div class="card-icon">✓</div>
+      <h3>Simple request process</h3>
+      <p>Tell us where, when and what you need. Your request is assigned a reference number for easy follow-up.</p>
+      <div class="mini-step"><span>01</span> Submit request</div>
+      <div class="mini-step"><span>02</span> ATIAT reviews</div>
+      <div class="mini-step"><span>03</span> Confirmation & arrangements</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="request">
+  <div class="container narrow">
+    <div class="section-heading">
+      <p class="eyebrow">VEHICLE HIRE REQUEST</p>
+      <h2>Tell us what you need</h2>
+      <p>Fields marked with * are required. Submission does not automatically confirm a booking.</p>
+    </div>
+
+    <form id="hireForm" class="form-card">
+      <div class="form-section"><h3>Contact details</h3></div>
+      <div class="form-grid">
+        <label>Full name *<input name="fullName" required placeholder="Your full name" /></label>
+        <label>Phone number *<input name="phoneNumber" required placeholder="0800 000 0000" /></label>
+        <label>Email address<input type="email" name="email" placeholder="you@example.com" /></label>
+        <label>Number of passengers<input type="number" name="passengers" min="1" value="1" /></label>
+      </div>
+
+      <div class="form-section"><h3>Trip details</h3></div>
+      <div class="form-grid">
+        <label>Pickup location *<input name="pickupLocation" required placeholder="e.g. Ikeja" /></label>
+        <label>Destination *<input name="destination" required placeholder="e.g. Victoria Island" /></label>
+        <label>Hire date *<input type="date" name="hireDate" id="hireDate" required /></label>
+        <label>Pickup time *<input type="time" name="pickupTime" required /></label>
+        <label>Expected duration<select name="duration"><option value="A few hours">A few hours</option><option value="Full day">Full day</option><option value="Multiple days">Multiple days</option></select></label>
+        <label>Vehicle preference<select name="vehiclePreference"><option value="No preference">No preference</option><option value="SUV">SUV</option><option value="Sedan">Sedan</option><option value="Executive Sedan">Executive Sedan</option><option value="Bus">Bus</option></select></label>
+        <label>Driver required<select name="driverRequired"><option value="true">Yes</option><option value="false">No</option></select></label>
+        <label>Purpose<select name="purpose"><option value="Business">Business</option><option value="Airport transfer">Airport transfer</option><option value="Event">Event</option><option value="Personal">Personal</option><option value="Other">Other</option></select></label>
+      </div>
+
+      <div class="form-section"><h3>Additional information</h3></div>
+      <label>Anything else ATIAT should know?<textarea name="additionalInformation" rows="4" placeholder="Special requirements, itinerary notes, etc."></textarea></label>
+      <button class="button full" type="submit">Submit Vehicle Hire Request</button>
+      <p class="form-note">By submitting this request, you are asking ATIAT to review your vehicle-hire requirements. A team member will contact you regarding availability, pricing and confirmation.</p>
+    </form>
+
+    <div id="successBox" class="success-card hidden"></div>
+    <div id="errorBox" class="error-card hidden"></div>
+  </div>
+</section>
+</main>
+<footer><div class="container footer-inner"><span>ATIAT Vehicle Hire</span><span>Request • Review • Confirm</span></div></footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
