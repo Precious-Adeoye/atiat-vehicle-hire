@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
     {
-        var origins = builder.Configuration["FrontendUrl"] ?? "https://atiat-vehicle-hire.onrender.com/";
+        var origins = builder.Configuration["FrontendUrl"] ?? "https://atiat-vehicle-hire.vercel.app/";
         policy.WithOrigins(origins.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
               .AllowAnyHeader()
               .AllowAnyMethod();
